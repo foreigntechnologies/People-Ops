@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "gEqFSakQvlY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kogli\\Desktop\\Projetos\\People-Ops\\backend\\services\\identity-service\\src\\Identity.Api\\Identity.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kogli\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
+    "C:\\Users\\kogli\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

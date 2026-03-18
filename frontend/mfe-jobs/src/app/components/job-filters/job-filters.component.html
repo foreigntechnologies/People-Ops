@@ -1,0 +1,43 @@
+<div class="filters-container">
+  <h3 class="filters-title">Filter Jobs</h3>
+  
+  <div class="filter-group">
+    <label>Search Keyword</label>
+    <input type="text" [(ngModel)]="filters.search" placeholder="e.g. Senior Angular" class="input-field" (keyup.enter)="applyFilters()">
+  </div>
+
+  <div class="filter-group">
+    <label>Work Model</label>
+    <select [(ngModel)]="filters.workModel" class="input-field" (change)="applyFilters()">
+      <option value="">All</option>
+      <option value="Remote">Remote</option>
+      <option value="Hybrid">Hybrid</option>
+      <option value="On-site">On-site</option>
+    </select>
+  </div>
+
+  <div class="filter-group">
+    <label>Location</label>
+    <input type="text" [(ngModel)]="filters.location" placeholder="City, State" class="input-field" (keyup.enter)="applyFilters()">
+  </div>
+
+  <div class="filter-group">
+    <label>Tech Stack</label>
+    <input type="text" [(ngModel)]="filters.techStack" placeholder="e.g. Docker, React" class="input-field" (keyup.enter)="applyFilters()">
+  </div>
+
+  <div class="filter-group">
+    <label>Area</label>
+    <select [(ngModel)]="filters.area" class="input-field" (change)="applyFilters()">
+      <option value="">All</option>
+      <option value="Back-end">Back-end</option>
+      <option value="Front-end">Front-end</option>
+      <option value="DevOps">DevOps</option>
+    </select>
+  </div>
+
+  <div class="filter-actions">
+    <button class="btn btn-secondary" (click)="clearFilters()">Clear</button>
+    <button class="btn btn-primary" (click)="applyFilters()">Apply</button>
+  </div>
+</div>

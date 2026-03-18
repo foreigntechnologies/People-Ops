@@ -1,0 +1,60 @@
+.jobs-layout {
+  display: flex;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 24px;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h2 {
+  font-size: 28px;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+.jobs-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loading-state, .empty-state {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  color: #666;
+  border: 1px dashed #ccc;
+}
+
+@media (max-width: 768px) {
+  .jobs-layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    position: static;
+  }
+}

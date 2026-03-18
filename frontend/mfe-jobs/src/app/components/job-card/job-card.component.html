@@ -1,0 +1,25 @@
+<div class="job-card">
+  <div class="job-header">
+    <div class="job-title-group">
+      <h3 class="job-title">{{ job.title }}</h3>
+      <span class="job-company">Company HQ</span>
+    </div>
+    <span class="job-date">{{ job.createdAt | date:'shortDate' }}</span>
+  </div>
+  
+  <p class="job-desc">{{ job.description }}</p>
+  
+  <div class="job-tags">
+    <span class="tag tag-workmodel">{{ job.workModel }}</span>
+    <span class="tag tag-location">{{ job.location }}</span>
+    <span class="tag tag-area">{{ job.area }}</span>
+  </div>
+  
+  <div class="job-tech">
+    <span class="tech-stack">Tech: {{ job.techStack }}</span>
+  </div>
+  
+  <div class="job-actions">
+    <button class="btn btn-primary">Apply Now</button>
+  </div>
+</div>

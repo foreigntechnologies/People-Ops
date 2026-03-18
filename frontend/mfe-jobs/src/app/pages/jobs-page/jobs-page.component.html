@@ -1,0 +1,24 @@
+<div class="jobs-layout">
+  <aside class="sidebar">
+    <app-job-filters (filtersChanged)="onFiltersChanged($event)"></app-job-filters>
+  </aside>
+
+  <main class="content">
+    <div class="page-header">
+      <h2>Explore Tech Jobs</h2>
+      <p class="subtitle">Find your next role as a developer, devops, or architect.</p>
+    </div>
+
+    <div *ngIf="isLoading" class="loading-state">
+      Loading jobs...
+    </div>
+
+    <div *ngIf="!isLoading && jobs.length === 0" class="empty-state">
+      <p>No jobs found matching your criteria.</p>
+    </div>
+
+    <div class="jobs-grid" *ngIf="!isLoading && jobs.length > 0">
+      <app-job-card *ngFor="let job of jobs" [job]="job"></app-job-card>
+    </div>
+  </main>
+</div>

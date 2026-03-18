@@ -1,0 +1,10 @@
+{
+  "SHELL": {
+    "DASHBOARD": "Painel Principal",
+    "JOBS": "Vagas",
+    "CANDIDATES": "Candidatos",
+    "COMPANIES": "Empresas",
+    "GLOBAL_SEARCH": "Busca global...",
+    "USER_ADMIN": "Administrador"
+  }
+}

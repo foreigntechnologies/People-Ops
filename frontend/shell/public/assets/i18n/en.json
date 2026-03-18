@@ -1,0 +1,10 @@
+{
+  "SHELL": {
+    "DASHBOARD": "Dashboard",
+    "JOBS": "Jobs",
+    "CANDIDATES": "Candidates",
+    "COMPANIES": "Companies",
+    "GLOBAL_SEARCH": "Global search...",
+    "USER_ADMIN": "Admin User"
+  }
+}

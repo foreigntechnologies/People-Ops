@@ -1,0 +1,6 @@
+{
+  "mfe-auth": "http://localhost:4201/remoteEntry.json",
+  "mfe-jobs": "http://localhost:4202/remoteEntry.json",
+  "mfe-dashboard": "http://localhost:4203/remoteEntry.json",
+  "mfe-candidates": "http://localhost:4204/remoteEntry.json"
+}
