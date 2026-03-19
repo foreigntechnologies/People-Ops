@@ -1,10 +1,65 @@
 {
   "SHELL": {
-    "DASHBOARD": "Dashboard",
+    "DASHBOARD": "Main Dashboard",
     "JOBS": "Jobs",
     "CANDIDATES": "Candidates",
     "COMPANIES": "Companies",
     "GLOBAL_SEARCH": "Global search...",
-    "USER_ADMIN": "Admin User"
+    "USER_ADMIN": "Administrator",
+    "NAVBAR": {
+      "FIND_JOBS": "Find Jobs",
+      "FOR_COMPANIES": "For Companies",
+      "FOR_CANDIDATES": "For Candidates",
+      "LOGIN": "Login",
+      "SIGNUP": "Sign Up"
+    },
+    "FOOTER": {
+      "DESCRIPTION": "People-Ops: Connecting talent and companies with cutting-edge technology.",
+      "LINKS": "Quick Links",
+      "CONTACT": "Contact"
+    },
+    "AUTH": {
+      "TYPE": { "CANDIDATE": "Candidate", "COMPANY": "Company" },
+      "LOGIN": { 
+        "CANDIDATE_TITLE": "Candidate Login", 
+        "COMPANY_TITLE": "Company Login", 
+        "SUBTITLE": "Access your People-Ops account", 
+        "SOCIAL_OR": "Or login with", 
+        "NO_ACCOUNT": "Don't have an account?" 
+      },
+      "REGISTER": { 
+        "CANDIDATE_TITLE": "Candidate Registration", 
+        "COMPANY_TITLE": "Company Registration", 
+        "SUBTITLE": "Join the People-Ops platform", 
+        "SOCIAL_OR": "Or register with", 
+        "ALREADY_HAVE": "Already have an account?" 
+      },
+      "FIELDS": { 
+        "EMAIL": "Email", 
+        "PASSWORD": "Password", 
+        "FULL_NAME": "Full Name", 
+        "COMPANY_NAME": "Company Name" 
+      },
+      "PLACEHOLDERS": { 
+        "EMAIL": "your@email.com", 
+        "PASSWORD": "••••••••", 
+        "FULL_NAME": "Your name", 
+        "COMPANY_NAME": "Your company name" 
+      },
+      "ACTIONS": { 
+        "LOGIN": "Login", 
+        "REGISTER": "Register" 
+      }
+    }
+  },
+  "JOBS": {
+    "HERO_TITLE": "Find your next role",
+    "HERO_SUBTITLE": "The best tech opportunities are right here.",
+    "SEARCH_PLACEHOLDER": "Role, tech or keywords...",
+    "SEARCH_BUTTON": "Search Jobs",
+    "FEATURE_TITLE": "Featured Jobs",
+    "LOADING": "Loading jobs...",
+    "EMPTY": "No jobs found.",
+    "DETAILS": "View Details"
   }
 }

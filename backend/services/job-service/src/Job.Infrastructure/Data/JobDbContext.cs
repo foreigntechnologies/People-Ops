@@ -17,6 +17,7 @@ public class JobDbContext : DbContext
         
         modelBuilder.Entity<JobPosition>(entity =>
         {
+            entity.ToTable("job_positions");
             entity.HasKey(e => e.Id);
             entity.Property(e => e.Title).IsRequired().HasMaxLength(200);
             entity.Property(e => e.WorkModel).HasMaxLength(50);

@@ -1,61 +1,105 @@
 # 🚀 Como Executar o Projeto (People-Ops)
 
-Este documento descreve como preparar o ambiente, rodar o banco de dados via Docker, os serviços de Backend (.NET) e os Micro Frontends (Angular).
-
-## 🐋 1. Banco de Dados (PostgreSQL via Docker)
-A infraestrutura principal de banco de dados e outros serviços unificados encontram-se no `docker-compose.yml` na raiz do projeto.
-Para inicializar o banco de dados PostgreSQL na porta `5432`:
-
-```bash
-docker-compose up db -d
-```
-**(Opcional):** Se desejar rodar toda a stack via Docker, execute apenas `docker-compose up -d`.
+Este documento descreve as duas formas de rodar a stack completa do People-Ops.
 
 ---
 
-## ⚙️ 2. Executando o Backend (.NET)
-O backend da aplicação é composto por Microserviços e um Gateway. No momento, estão operacionais o `identity-service` e o `job-service`, roteados potencialmente pelo `gateway`.
+## 🐋 OPÇÃO 1: Tudo via Docker (Full Stack)
 
-### Pre-requisitos
-* **.NET 8.0/9.0 SDK**
-* A string de conexão apontará por padrão para o PostgreSQL recém-subido no Docker (`localhost:5432`).
+Você pode rodar todo o ambiente em dois modos: **Desenvolvimento** (com Swagger habilitado) ou **Produção** (otimizado).
 
-### Rodar cada Microserviço:
-Abra terminais independentes ou rode em background:
-
-**Identity Service (Porta 5001 no docker, mas no Kestrel local pode variar):**
+### Modo Desenvolvimento (Default)
+Neste modo, o backend habilita o Swagger e o frontend pode ser construído com configurações de debug.
 ```bash
-cd backend/services/identity-service/src/Identity.Api
-dotnet run
+# Para construir e subir
+docker-compose up -d --build
+
+# Para apenas subir
+docker-compose up -d
 ```
 
-**Job Service (Porta 5002 no docker):**
+### Modo Produção
+Neste modo, o ambiente é configurado para máxima performance e o Swagger é desabilitado por segurança.
 ```bash
-cd backend/services/job-service/src/Job.Api
-dotnet run
+# Para construir e subir
+docker-compose -f docker-compose.prod.yml up -d --build
+
+# Para apenas subir
+docker-compose -f docker-compose.prod.yml up -d
 ```
 
-**API Gateway (Porta 5000 no docker):**
+## 🚀 Como Executar (Modo Rápido)
+
+Para facilitar, criei um script que sobe tudo e já mostra os links no seu terminal:
+
+1. **Abra o PowerShell** na raiz do projeto.
+2. **Execute o script:**
+   ```powershell
+   .\up.ps1
+   ```
+
+Este comando irá compilar todas as imagens (Backend 10.0 e Angular 21), subir os containers e exibir uma tabela com todos os links de acesso.
+
+---
+
+## 🐳 OPÇÃO 1: Docker Compose (Manual)
+Ideal para rodar o ambiente completo.
+## 🔗 Links de Acesso (Modo Docker)
+
+    'São Paulo, Brasil', 
+    'Angular 21, .NET 10, PostgreSQL', 
+    'Engenharia de Software', 
+    gen_random_uuid(), 
+    NOW()
+);
+```
+
+#### Consultar as Vagas
+```sql
+SELECT * FROM "JobPositions";
+```
+
+> [!TIP]
+> Você pode usar a extensão "PostgreSQL" no VS Code ou o software DBeaver para gerenciar esses dados de forma visual.
+3. **Parar tudo:**
+   ```bash
+   docker-compose down
+   ```
+
+---
+
+## ⚙️ OPÇÃO 2: Híbrido / Separado (Desenvolvimento Local)
+Ideal para desenvolvimento individual de serviços.
+
+### 1. Banco de Dados (via Docker)
+É necessário ter o PostgreSQL rodando para que os serviços de backend funcionem.
+```bash
+docker-compose up db -d
+```
+
+### 2. Executando o Backend (.NET)
+Abra terminais independentes para cada serviço:
+
+**API Gateway (Porta 5000):**
 ```bash
 cd backend/gateway/ApiGateway
 dotnet run
 ```
 
----
-
-## 🌐 3. Executando o Frontend (Micro Frontends - Angular)
-A aplicação de frente usa Module Federation. O Angular cli / Node devem estar instalados (`Node.js LTS` sugerido, Angular `21.x`).
-
-### Instalando as dependências
+**Identity Service (Porta 5001):**
 ```bash
-# Na raiz, se existir um package.json principal ou instale individualmente:
-cd frontend/shell && npm install
-cd ../mfe-auth && npm install
-cd ../mfe-jobs && npm install
+cd backend/services/identity-service/src/Identity.Api
+dotnet run
 ```
 
-### Rodando o ambiente
-Para que os MFEs se comuniquem, você deve subir o App-Shell e os Micro Frontends Auth e Jobs juntos:
+**Job Service (Porta 5002):**
+```bash
+cd backend/services/job-service/src/Job.Api
+dotnet run
+```
+
+### 3. Executando o Frontend (Micro Frontends)
+Certifique-se de que as dependências foram instaladas (`npm install`).
 
 **Shell (Porta 4200):**
 ```bash
@@ -75,9 +119,10 @@ cd frontend/mfe-jobs
 npm start
 ```
 
-*Nota: Acesse `http://localhost:4200` para entrar no projeto. O roteamento no Shell irá consumir o MFE de Auth e Jobs baseado no Module Federation.*
+*Nota: Acesse `http://localhost:4200` para entrar no projeto.*
 
 ---
+
 
 ## 🧪 4. Como rodar os Testes (Unitários e Integração)
 

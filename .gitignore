@@ -1,0 +1,48 @@
+# General
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment and local overrides
+.env
+.env.*
+!.env.example
+!.env.sample
+docker-compose.override.yml
+
+# IDEs and editors
+.idea/
+.vs/
+.history/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/mcp.json
+
+# .NET build artifacts
+**/bin/
+**/obj/
+**/TestResults/
+*.user
+*.suo
+*.pdb
+*.cache
+
+# Node / Angular artifacts
+**/node_modules/
+**/dist/
+**/coverage/
+**/out-tsc/
+**/.angular/cache/
+**/.cache/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*

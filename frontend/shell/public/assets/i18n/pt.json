@@ -5,6 +5,61 @@
     "CANDIDATES": "Candidatos",
     "COMPANIES": "Empresas",
     "GLOBAL_SEARCH": "Busca global...",
-    "USER_ADMIN": "Administrador"
+    "USER_ADMIN": "Administrador",
+    "NAVBAR": {
+      "FIND_JOBS": "Buscar Vagas",
+      "FOR_COMPANIES": "Para Empresas",
+      "FOR_CANDIDATES": "Para Candidatos",
+      "LOGIN": "Entrar",
+      "SIGNUP": "Cadastrar-se"
+    },
+    "FOOTER": {
+      "DESCRIPTION": "People-Ops: Conectando talentos e empresas com tecnologia de ponta.",
+      "LINKS": "Links Rápidos",
+      "CONTACT": "Contato"
+    },
+    "AUTH": {
+      "TYPE": { "CANDIDATE": "Candidato", "COMPANY": "Empresa" },
+      "LOGIN": { 
+        "CANDIDATE_TITLE": "Login de Candidato", 
+        "COMPANY_TITLE": "Login de Empresa", 
+        "SUBTITLE": "Acesse sua conta People-Ops", 
+        "SOCIAL_OR": "Ou entre com", 
+        "NO_ACCOUNT": "Não tem uma conta?" 
+      },
+      "REGISTER": { 
+        "CANDIDATE_TITLE": "Cadastro de Candidato", 
+        "COMPANY_TITLE": "Cadastro de Empresa", 
+        "SUBTITLE": "Junte-se à plataforma People-Ops", 
+        "SOCIAL_OR": "Ou cadastre-se com", 
+        "ALREADY_HAVE": "Já tem uma conta?" 
+      },
+      "FIELDS": { 
+        "EMAIL": "E-mail", 
+        "PASSWORD": "Senha", 
+        "FULL_NAME": "Nome Completo", 
+        "COMPANY_NAME": "Nome da Empresa" 
+      },
+      "PLACEHOLDERS": { 
+        "EMAIL": "seu@email.com", 
+        "PASSWORD": "••••••••", 
+        "FULL_NAME": "Seu nome", 
+        "COMPANY_NAME": "Nome da sua empresa" 
+      },
+      "ACTIONS": { 
+        "LOGIN": "Entrar", 
+        "REGISTER": "Cadastrar" 
+      }
+    }
+  },
+  "JOBS": {
+    "HERO_TITLE": "Encontre sua próxima vaga",
+    "HERO_SUBTITLE": "As melhores oportunidades em tecnologia estão aqui.",
+    "SEARCH_PLACEHOLDER": "Cargo, tecnologia ou palavra-chave...",
+    "SEARCH_BUTTON": "Buscar Vagas",
+    "FEATURE_TITLE": "Vagas em destaque",
+    "LOADING": "Carregando vagas...",
+    "EMPTY": "Nenhuma vaga encontrada.",
+    "DETAILS": "Ver Detalhes"
   }
 }

@@ -1,60 +1,112 @@
 .jobs-layout {
-  display: flex;
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  padding: 0;
+  background-color: #f8f9fa;
+  min-height: 100vh;
 }
 
 .sidebar {
-  width: 320px;
-  flex-shrink: 0;
+  padding: 2rem;
+  background: white;
+  border-right: 1px solid #eee;
+  height: 100vh;
   position: sticky;
-  top: 24px;
+  top: 0;
 }
 
 .content {
-  flex-grow: 1;
+  padding: 0;
 }
 
-.page-header {
-  margin-bottom: 24px;
+.hero-section {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  padding: 4rem 2rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.page-header h2 {
-  font-size: 28px;
-  color: #1a1a1a;
-  margin: 0 0 8px 0;
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
 }
 
-.subtitle {
-  color: #666;
-  font-size: 16px;
-  margin: 0;
+.hero-content .subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+}
+
+.search-hero {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.search-hero input {
+  flex: 1;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  outline: none;
+}
+
+.search-hero button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-hero button:hover {
+  background: #4338ca;
+}
+
+.results-header {
+  padding: 0 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.results-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
 }
 
 .jobs-grid {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1.5rem;
+  padding: 0 2rem 4rem 2rem;
 }
 
 .loading-state, .empty-state {
   text-align: center;
-  padding: 40px;
-  background: white;
-  border-radius: 8px;
-  color: #666;
-  border: 1px dashed #ccc;
+  padding: 4rem;
+  font-size: 1.25rem;
+  color: #6b7280;
 }
 
 @media (max-width: 768px) {
   .jobs-layout {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
   .sidebar {
-    width: 100%;
-    position: static;
+    display: none; /* Hide sidebar on mobile for simplicity now */
+  }
+  .hero-content h1 {
+    font-size: 2rem;
   }
 }

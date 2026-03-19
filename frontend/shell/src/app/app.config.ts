@@ -1,12 +1,20 @@
-import { ApplicationConfig, provideZoneChangeDetection, importProvidersFrom } from '@angular/core';
+import { ApplicationConfig, provideZoneChangeDetection, importProvidersFrom, Injectable } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import { routes } from './app.routes';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader, TranslateService, TranslateStore } from '@ngx-translate/core';
+import { routes } from './app.routes';
+import { Observable } from 'rxjs';
+
+@Injectable({ providedIn: 'root' })
+export class CustomLoader implements TranslateLoader {
+  constructor(private http: HttpClient) {}
+  getTranslation(lang: string): Observable<any> {
+    return this.http.get(`./assets/i18n/${lang}.json`);
+  }
+}
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new CustomLoader(http);
 }
 
 export const appConfig: ApplicationConfig = {
@@ -19,10 +27,12 @@ export const appConfig: ApplicationConfig = {
         defaultLanguage: 'pt',
         loader: {
           provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
+          useClass: CustomLoader,
           deps: [HttpClient]
         }
       })
-    )
+    ),
+    TranslateService,
+    TranslateStore
   ]
 };

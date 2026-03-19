@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 import { JobService } from '../../services/job.service';
 import { JobPosition, JobFilters } from '../../models/job.model';
 import { JobCardComponent } from '../../components/job-card/job-card.component';
@@ -8,7 +9,7 @@ import { JobFiltersComponent } from '../../components/job-filters/job-filters.co
 @Component({
   selector: 'app-jobs-page',
   standalone: true,
-  imports: [CommonModule, JobCardComponent, JobFiltersComponent],
+  imports: [CommonModule, JobCardComponent, JobFiltersComponent, TranslateModule],
   templateUrl: './jobs-page.component.html',
   styleUrls: ['./jobs-page.component.css']
 })

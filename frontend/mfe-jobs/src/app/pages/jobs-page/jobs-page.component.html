@@ -4,17 +4,34 @@
   </aside>
 
   <main class="content">
-    <div class="page-header">
-      <h2>Explore Tech Jobs</h2>
-      <p class="subtitle">Find your next role as a developer, devops, or architect.</p>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>{{ 'JOBS.HERO_TITLE' | translate }}</h1>
+        <p class="subtitle">{{ 'JOBS.HERO_SUBTITLE' | translate }}</p>
+        <div class="search-hero">
+          <input 
+            type="text" 
+            [placeholder]="'JOBS.SEARCH_PLACEHOLDER' | translate" 
+            #searchInput
+            (keyup.enter)="onFiltersChanged({search: searchInput.value})"
+          >
+          <button (click)="onFiltersChanged({search: searchInput.value})">
+            {{ 'JOBS.SEARCH_BUTTON' | translate }}
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="results-header">
+       <h3>{{ 'JOBS.FEATURE_TITLE' | translate }}</h3>
     </div>
 
     <div *ngIf="isLoading" class="loading-state">
-      Loading jobs...
+      {{ 'JOBS.LOADING' | translate }}
     </div>
 
     <div *ngIf="!isLoading && jobs.length === 0" class="empty-state">
-      <p>No jobs found matching your criteria.</p>
+      <p>{{ 'JOBS.EMPTY' | translate }}</p>
     </div>
 
     <div class="jobs-grid" *ngIf="!isLoading && jobs.length > 0">

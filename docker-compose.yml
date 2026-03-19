@@ -1,20 +1,26 @@
-version: "3.9"
-
 services:
   gateway:
     build: 
       context: ./backend/gateway/ApiGateway
       dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "5000:8080"
     depends_on:
       - identity
       - job
+      - company
+      - application
+      - candidate
 
   identity:
     build:
       context: ./backend/services/identity-service
       dockerfile: src/Identity.Api/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=db;Database=peopleops-db;Username=postgres;Password=root
     ports:
       - "5001:8080"
     depends_on:
@@ -24,8 +30,47 @@ services:
     build:
       context: ./backend/services/job-service
       dockerfile: src/Job.Api/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=db;Database=peopleops-db;Username=postgres;Password=root
     ports:
       - "5002:8080"
+    depends_on:
+      - db
+
+  company:
+    build:
+      context: ./backend/services/company-service
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=db;Database=peopleops-db;Username=postgres;Password=root
+    ports:
+      - "5003:8080"
+    depends_on:
+      - db
+
+  application:
+    build:
+      context: ./backend/services/application-service
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=db;Database=peopleops-db;Username=postgres;Password=root
+    ports:
+      - "5004:8080"
+    depends_on:
+      - db
+
+  candidate:
+    build:
+      context: ./backend/services/candidate-service
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=db;Database=peopleops-db;Username=postgres;Password=root
+    ports:
+      - "5005:8080"
     depends_on:
       - db
 
@@ -33,6 +78,8 @@ services:
     build: 
       context: ./frontend/shell
       dockerfile: Dockerfile
+      args:
+        - CONFIGURATION=development
     ports:
       - "4200:80"
 
@@ -40,6 +87,8 @@ services:
     build: 
       context: ./frontend/mfe-auth
       dockerfile: Dockerfile
+      args:
+        - CONFIGURATION=development
     ports:
       - "4201:80"
 
@@ -47,14 +96,39 @@ services:
     build: 
       context: ./frontend/mfe-jobs
       dockerfile: Dockerfile
+      args:
+        - CONFIGURATION=development
     ports:
       - "4202:80"
+
+  mfe-dashboard:
+    build: 
+      context: ./frontend/mfe-dashboard
+      dockerfile: Dockerfile
+      args:
+        - CONFIGURATION=development
+    ports:
+      - "4203:80"
+
+  mfe-candidates:
+    build: 
+      context: ./frontend/mfe-candidates
+      dockerfile: Dockerfile
+      args:
+        - CONFIGURATION=development
+    ports:
+      - "4204:80"
 
   db:
     image: postgres:15
     environment:
-      POSTGRES_DB: peopleops
+      POSTGRES_DB: peopleops-db
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: root
     ports:
       - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

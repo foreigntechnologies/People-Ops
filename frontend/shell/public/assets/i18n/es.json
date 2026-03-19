@@ -1,10 +1,65 @@
 {
   "SHELL": {
-    "DASHBOARD": "Tablero",
-    "JOBS": "Trabajos",
+    "DASHBOARD": "Panel Principal",
+    "JOBS": "Empleos",
     "CANDIDATES": "Candidatos",
     "COMPANIES": "Empresas",
     "GLOBAL_SEARCH": "Búsqueda global...",
-    "USER_ADMIN": "Administrador"
+    "USER_ADMIN": "Administrador",
+    "NAVBAR": {
+      "FIND_JOBS": "Buscar Empleos",
+      "FOR_COMPANIES": "Para Empresas",
+      "FOR_CANDIDATES": "Para Candidatos",
+      "LOGIN": "Entrar",
+      "SIGNUP": "Registrarse"
+    },
+    "FOOTER": {
+      "DESCRIPTION": "People-Ops: Conectando talentos y empresas con tecnología de punta.",
+      "LINKS": "Enlaces rápidos",
+      "CONTACT": "Contacto"
+    },
+    "AUTH": {
+      "TYPE": { "CANDIDATE": "Candidato", "COMPANY": "Empresa" },
+      "LOGIN": { 
+        "CANDIDATE_TITLE": "Login de Candidato", 
+        "COMPANY_TITLE": "Login de Empresa", 
+        "SUBTITLE": "Acceda a su cuenta People-Ops", 
+        "SOCIAL_OR": "O entre con", 
+        "NO_ACCOUNT": "¿No tienes una cuenta?" 
+      },
+      "REGISTER": { 
+        "CANDIDATE_TITLE": "Registro de Candidato", 
+        "COMPANY_TITLE": "Registro de Empresa", 
+        "SUBTITLE": "Únete a la plataforma People-Ops", 
+        "SOCIAL_OR": "O regístrate con", 
+        "ALREADY_HAVE": "¿Ya tienes una cuenta?" 
+      },
+      "FIELDS": { 
+        "EMAIL": "Correo electrónico", 
+        "PASSWORD": "Contraseña", 
+        "FULL_NAME": "Nombre Completo", 
+        "COMPANY_NAME": "Nombre de la Empresa" 
+      },
+      "PLACEHOLDERS": { 
+        "EMAIL": "tu@email.com", 
+        "PASSWORD": "••••••••", 
+        "FULL_NAME": "Tu nombre", 
+        "COMPANY_NAME": "Nombre de tu empresa" 
+      },
+      "ACTIONS": { 
+        "LOGIN": "Entrar", 
+        "REGISTER": "Registrar" 
+      }
+    }
+  },
+  "JOBS": {
+    "HERO_TITLE": "Encuentra tu próximo empleo",
+    "HERO_SUBTITLE": "Las mejores oportunidades tecnológicas están aquí.",
+    "SEARCH_PLACEHOLDER": "Cargo, tecnología o palabras clave...",
+    "SEARCH_BUTTON": "Buscar Empleos",
+    "FEATURE_TITLE": "Empleos destacados",
+    "LOADING": "Cargando empleos...",
+    "EMPTY": "No se encontraron empleos.",
+    "DETAILS": "Ver Detalles"
   }
 }

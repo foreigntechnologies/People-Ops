@@ -1,0 +1,57 @@
+{
+  "AUTH": {
+    "TYPE": {
+      "CANDIDATE": "Candidate",
+      "COMPANY": "Company"
+    },
+    "LOGIN": {
+      "CANDIDATE_TITLE": "Candidate Login",
+      "COMPANY_TITLE": "Company Login",
+      "SUBTITLE": "Access your People-Ops account",
+      "SOCIAL_OR": "Or login with",
+      "NO_ACCOUNT": "Don't have an account?"
+    },
+    "REGISTER": {
+      "CANDIDATE_TITLE": "Candidate Registration",
+      "COMPANY_TITLE": "Company Registration",
+      "SUBTITLE": "Join the People-Ops platform",
+      "SOCIAL_OR": "Or register with",
+      "ALREADY_HAVE": "Already have an account?"
+    },
+    "FIELDS": {
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "FULL_NAME": "Full Name",
+      "COMPANY_NAME": "Company Name",
+      "CONFIRM_PASSWORD": "Confirm password"
+    },
+    "PLACEHOLDERS": {
+      "EMAIL": "you@email.com",
+      "PASSWORD": "••••••••",
+      "FULL_NAME": "Your name",
+      "COMPANY_NAME": "Your company name",
+      "CONFIRM_PASSWORD": "Repeat your password"
+    },
+    "ACTIONS": {
+      "LOGIN": "Login",
+      "REGISTER": "Register",
+      "LOADING": "Processing..."
+    },
+    "SOCIAL": {
+      "GOOGLE": "Google",
+      "GITHUB": "GitHub",
+      "LINKEDIN": "LinkedIn"
+    },
+    "ERRORS": {
+      "REQUIRED": "Fill in this field.",
+      "INVALID_EMAIL": "Enter a valid email.",
+      "PASSWORD_MIN": "Password must have at least 6 characters.",
+      "PASSWORD_MISMATCH": "Passwords do not match."
+    },
+    "MESSAGES": {
+      "REGISTER_SUCCESS": "Registration completed successfully. You can now sign in.",
+      "REGISTER_FAILED": "Could not complete registration.",
+      "LOGIN_FAILED": "Could not complete sign in."
+    }
+  }
+}

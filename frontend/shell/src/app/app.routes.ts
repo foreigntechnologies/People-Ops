@@ -4,22 +4,27 @@ import { loadRemoteModule } from '@angular-architects/native-federation';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'jobs',
     pathMatch: 'full'
   },
   {
     path: 'dashboard',
-    loadComponent: () =>
-      loadRemoteModule('mfe-dashboard', './Component').then((m) => m.AppComponent)
+    loadChildren: () =>
+      loadRemoteModule('mfe-dashboard', './routes').then((m) => m.routes)
   },
   {
     path: 'jobs',
-    loadComponent: () =>
-      loadRemoteModule('mfe-jobs', './Component').then((m) => m.AppComponent)
+    loadChildren: () =>
+      loadRemoteModule('mfe-jobs', './routes').then((m) => m.routes)
+  },
+  {
+    path: 'auth',
+    loadChildren: () =>
+      loadRemoteModule('mfe-auth', './routes').then((m) => m.routes)
   },
   {
     path: 'candidates',
-    loadComponent: () =>
-      loadRemoteModule('mfe-candidates', './Component').then((m) => m.AppComponent)
+    loadChildren: () =>
+      loadRemoteModule('mfe-candidates', './routes').then((m) => m.routes)
   }
 ];

@@ -1,0 +1,32 @@
+{
+  "SHELL": {
+    "DASHBOARD": "Main Dashboard",
+    "JOBS": "Jobs",
+    "CANDIDATES": "Candidates",
+    "COMPANIES": "Companies",
+    "GLOBAL_SEARCH": "Global search...",
+    "USER_ADMIN": "Administrator",
+    "NAVBAR": {
+      "FIND_JOBS": "Find Jobs",
+      "FOR_COMPANIES": "For Companies",
+      "FOR_CANDIDATES": "For Candidates",
+      "LOGIN": "Login",
+      "SIGNUP": "Sign Up"
+    },
+    "FOOTER": {
+      "DESCRIPTION": "People-Ops: Connecting talent and companies with cutting-edge technology.",
+      "LINKS": "Quick Links",
+      "CONTACT": "Contact"
+    }
+  },
+  "JOBS": {
+    "HERO_TITLE": "Find your next role",
+    "HERO_SUBTITLE": "The best tech opportunities are right here.",
+    "SEARCH_PLACEHOLDER": "Role, tech or keywords...",
+    "SEARCH_BUTTON": "Search Jobs",
+    "FEATURE_TITLE": "Featured Jobs",
+    "LOADING": "Loading jobs...",
+    "EMPTY": "No jobs found.",
+    "DETAILS": "View Details"
+  }
+}

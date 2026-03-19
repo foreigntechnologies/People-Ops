@@ -1,0 +1,32 @@
+{
+  "SHELL": {
+    "DASHBOARD": "Painel Principal",
+    "JOBS": "Vagas",
+    "CANDIDATES": "Candidatos",
+    "COMPANIES": "Empresas",
+    "GLOBAL_SEARCH": "Busca global...",
+    "USER_ADMIN": "Administrador",
+    "NAVBAR": {
+      "FIND_JOBS": "Buscar Vagas",
+      "FOR_COMPANIES": "Para Empresas",
+      "FOR_CANDIDATES": "Para Candidatos",
+      "LOGIN": "Entrar",
+      "SIGNUP": "Cadastrar-se"
+    },
+    "FOOTER": {
+      "DESCRIPTION": "People-Ops: Conectando talentos e empresas com tecnologia de ponta.",
+      "LINKS": "Links Rápidos",
+      "CONTACT": "Contato"
+    }
+  },
+  "JOBS": {
+    "HERO_TITLE": "Encontre sua próxima vaga",
+    "HERO_SUBTITLE": "As melhores oportunidades em tecnologia estão aqui.",
+    "SEARCH_PLACEHOLDER": "Cargo, tecnologia ou palavra-chave...",
+    "SEARCH_BUTTON": "Buscar Vagas",
+    "FEATURE_TITLE": "Vagas em destaque",
+    "LOADING": "Carregando vagas...",
+    "EMPTY": "Nenhuma vaga encontrada.",
+    "DETAILS": "Ver Detalhes"
+  }
+}

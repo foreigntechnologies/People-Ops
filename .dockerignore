@@ -1,0 +1,16 @@
+**/.git
+**/bin
+**/obj
+**/node_modules
+**/.vs
+**/.vscode
+**/dist
+**/.angular
+.git
+.vs
+.vscode
+node_modules
+bin
+obj
+dist
+.angular

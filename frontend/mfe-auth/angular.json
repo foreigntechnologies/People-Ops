@@ -56,7 +56,7 @@
               }
             ],
             "styles": ["src/styles.css"],
-            "polyfills": ["es-module-shims"]
+            "polyfills": ["es-module-shims", "zone.js"]
           },
           "configurations": {
             "production": {
